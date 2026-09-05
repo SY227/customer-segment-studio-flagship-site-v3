@@ -466,6 +466,11 @@ img { display: block; max-width: 100%; }
   z-index:1;
 }
 
+
+.group-picker button[data-group="dormant-vips"]::before {
+  bottom: 23px;
+}
+
 .group-picker img { width:100%; aspect-ratio:1.18/1; object-fit:contain; object-position:center bottom; border-radius:0; }
 .group-picker span { display:block; margin-top:5px; font-size:.61rem; font-weight:730; line-height:1.15; text-align:center; }
 .method-line { margin-top:20px; display:flex; align-items:flex-start; justify-content:space-between; gap:25px; }
