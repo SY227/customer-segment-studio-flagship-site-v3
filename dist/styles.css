@@ -428,9 +428,44 @@ img { display: block; max-width: 100%; }
   line-height:1.58;
 }
 .group-insight-card small { grid-column:1 / -1; margin-top:14px; color:#7a818d; font-size:.7rem; }
-.group-picker { margin-top:20px; display:grid; grid-template-columns: repeat(9, minmax(0,1fr)); gap:8px; }
-.group-picker button { min-width:0; padding:5px 5px 8px; border-radius:14px; border:1px solid rgba(17,24,32,.09); background:rgba(255,255,255,.72); cursor:pointer; transition:150ms ease; }
-.group-picker button[aria-pressed="true"] { background:rgba(237,234,255,.92); color:#11141a; border-color:rgba(112,101,214,.32); box-shadow:0 10px 23px rgba(52,45,126,.12); transform:translateY(-2px); }
+.group-picker { margin:0 0 20px; display:grid; grid-template-columns: repeat(9, minmax(0,1fr)); gap:8px; }
+.group-picker button { position:relative; min-width:0; padding:5px 5px 8px; border-radius:14px; border:1px solid rgba(17,24,32,.09); background:rgba(255,255,255,.72); cursor:pointer; transition:150ms ease; }
+.group-picker button[aria-pressed="true"] { background:rgba(255,255,255,.72); color:#11141a; border-color:rgba(112,101,214,.32); box-shadow:0 10px 23px rgba(52,45,126,.12); transform:translateY(-2px); }
+
+.group-picker button[data-group="occasional-buyers"] {
+  --missing-boundary: rgba(196,132,255,.72);
+}
+
+.group-picker button[data-group="dormant-vips"] {
+  --missing-boundary: rgba(184,132,98,.72);
+}
+
+.group-picker button[data-group="inactive-customers"] {
+  --missing-boundary: rgba(168,182,209,.82);
+}
+
+.group-picker button[data-group="occasional-buyers"]::before,
+.group-picker button[data-group="dormant-vips"]::before,
+.group-picker button[data-group="inactive-customers"]::before {
+  content:"";
+  position:absolute;
+  left:5px;
+  right:5px;
+  top:5px;
+  bottom:31px;
+  border:1px solid var(--missing-boundary);
+  border-radius:10px;
+  pointer-events:none;
+  z-index:2;
+}
+
+.group-picker button[data-group="occasional-buyers"] img,
+.group-picker button[data-group="dormant-vips"] img,
+.group-picker button[data-group="inactive-customers"] img {
+  position:relative;
+  z-index:1;
+}
+
 .group-picker img { width:100%; aspect-ratio:1.18/1; object-fit:contain; object-position:center bottom; border-radius:0; }
 .group-picker span { display:block; margin-top:5px; font-size:.61rem; font-weight:730; line-height:1.15; text-align:center; }
 .method-line { margin-top:20px; display:flex; align-items:flex-start; justify-content:space-between; gap:25px; }
