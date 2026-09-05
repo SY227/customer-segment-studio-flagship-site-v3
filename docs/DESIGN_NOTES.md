@@ -1,66 +1,38 @@
-# Design notes — V2.1.2
+# Design notes — V3.1.1
 
-## Commercial flow
+## Commercial structure
 
-The site is intentionally short. It is not documentation and it does not use top-level tabs for the whole website.
+V3.1.1 intentionally changes the flagship site from a long-scroll narrative into a persistent top-level tab system. The change is presentational: the product, screenshots, segmentation model, claims, review flow, and live-product CTA remain the same.
 
-The primary reading order is:
+Primary tabs:
 
-1. **What is it?** — Hero.
-2. **Show me.** — Three product-experience tabs.
-3. **Why should I care?** — Business value.
-4. **Can I trust how it works?** — RFM flow + expandable methodology.
-5. **Let me try it.** — Final CTA.
+1. **Overview** — hero, Order History / Nine Groups / Next Move story card, nine-segment rail, and review CTA.
+2. **See the Field** — the real product screen and portfolio-level context.
+3. **Understand Groups** — one same-case crop plus all nine interactive group signals.
+4. **Make the Move** — one same-case action crop plus objective, channel, KPI, and test framing.
+5. **Business Value** — growth, spend discipline, and the compact RFM workflow.
 
-## Product tabs
+## Overview composition
 
-The single tabbed section uses the product's own natural sequence:
+The approved visual direction is translated into code rather than used as a static screenshot:
 
-- **See the field** — portfolio-level view.
-- **Understand the group** — selected-segment context.
-- **Make the move** — actionable strategy guidance.
+- dark full-width top navigation,
+- editorial serif headline on the left,
+- rounded Living Segment Map story card on the right,
+- soft blue/violet/teal atmospheric background,
+- compact proof items under the hero CTA,
+- nine-character segment rail below,
+- lavender segmentation-review card at the lower right.
 
-This reduces repeated screenshots and avoids turning the entire marketing website into dashboard-style navigation.
+## Product and evidence boundaries
 
-## Visual tone
+- Product proof continues to use actual Customer Segment Studio screenshots and same-case crops.
+- The Order Ledger remains a workflow illustration and is labeled as such.
+- Character art explains groups and makes the data story easier to scan; it does not represent simulated customer behavior.
+- Historical revenue is not described as forecast revenue or guaranteed recovery.
+- Suggested actions remain ideas to test, not promises of causal uplift.
 
-- Editorial serif headline + restrained sans-serif UI copy.
-- Warm paper shell for the marketing story.
-- Dark product experience section to match the live Customer Segment Studio interface.
-- Violet, cyan, teal, and gold remain accent colors rather than decorative noise.
-- Real product screenshots stay the visual proof.
+## V2.1.2 assets carried forward
 
-
-## v0.3.7 individual-character enrichment
-
-The site structure, commercial copy, product tabs, value story, methodology disclosure, and live-product CTAs remain unchanged.
-
-Individual characters now reinforce the current product identity in two existing locations only:
-
-1. a small cast beneath the hero explanation,
-2. the existing nine-group summary inside the How It Works panel.
-
-The character layer is intentionally secondary to the product screenshot and commercial explanation. It adds recognition without turning the website into a game landing page or embedding the product.
-
-## V2.1 Nine Stories Reveal
-
-Preserve the existing palette, editorial hierarchy and character assets. Change the role of the character layer: list → grouping → a suggested next action, then return to real product evidence. The 6.4-second introduction plays at most once per tab/session, is stoppable, and does not gate the CTA. Static/reduced-motion visitors get the screenshot first.
-
-Keep the existing section order. The three product tabs tell one Dormant VIPs example with real crops. The nine-group area is not a new section: add compact action identities and one selected-group explanation. The business-value columns reuse familiar characters rather than introducing new symbols.
-
-Replace the repeated bottom trial pitch with a human segmentation-review invitation and a secondary trial link. The contact drawer creates a draft, not a fake server submission. Essential page text is visible immediately; only the contained storyboard requires motion.
-
-
-## V2.1.1 visual corrections
-
-Two targeted visual corrections only:
-
-1. **Dormant VIPs** uses the original warm Barbarian colors from the licensed KayKit source instead of the pale-purple presentation treatment. The segment border/accent remains pink so the group identity does not change.
-2. **Order history** is presented as an Order Ledger over a subdued crop of the actual living-map merchant environment. This makes the input feel like part of the same visual world without adding a new character, new product capability, or fake live analysis.
-
-All product screenshots, commercial section order, CTA structure, RFM claims, and product behavior remain unchanged.
-
-## V2.1.2 visual corrections
-
-- Rebuilt the Dormant VIP portrait WebP from the approved transparent PNG so browsers no longer render a black rectangle behind the character.
-- Kept the order ledger as the dominant business visual, then added one existing character asset at the edge of the ledger scene as a game-world bridge. No product UI, segmentation logic, or product screenshot was changed.
+- Dormant VIP character assets retain the corrected transparent background and original warm character colors.
+- Order History retains the existing game-world bridge and character art without changing the live product UI or segmentation logic.

@@ -1,20 +1,16 @@
-# Local preview — V2.1.2
-
-1. Extract the ZIP into a NEW folder. Do not copy over an existing production working directory.
-2. Open Terminal in that new folder.
-3. Run:
+# Quickstart — V3.1.1
 
 ```bash
 npm run qa
-PORT=3011 npm run dev
+PORT=3014 npm run dev
 ```
 
-Open `http://localhost:3011/`.
-Campaign opening: `http://localhost:3011/?story=reveal`.
-Direct opening: `http://localhost:3011/?story=direct`.
+Open:
 
-No API key or npm install is needed. Node.js 20+ is required.
-If port 3011 is in use, choose another free port with `PORT=3012 npm run dev`.
-Press Control+C to stop this preview; do not terminate unrelated processes.
+- `http://localhost:3014`
+- `http://localhost:3014/#field`
+- `http://localhost:3014/#group`
+- `http://localhost:3014/#move`
+- `http://localhost:3014/#value`
 
-This command does NOT push, link a Vercel project, or alter either existing production site.
+The navigation changes panels in place; it does not jump through a long marketing page.

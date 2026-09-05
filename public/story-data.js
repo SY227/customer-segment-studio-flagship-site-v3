@@ -1,6 +1,6 @@
 /* Presentation content only. Nothing in this file changes the live product or calculates RFM. */
 window.STUDIO_CONTENT = Object.freeze({
-  version: '2.1.2',
+  version: '3.1.1',
   reviewEmail: 'simon.yam227@gmail.com',
   productUrl: 'https://customer-segment-studio.vercel.app/',
   campaigns: {

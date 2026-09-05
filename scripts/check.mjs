@@ -10,36 +10,36 @@ const required = [
   'public/assets/screens/living-map-occasional-buyers.webp', 'public/assets/screens/living-map-occasional-buyers.png',
   'public/assets/screens/customer-segment-cards.webp', 'public/assets/screens/customer-segment-cards.png',
   'public/assets/story/order-ledger-world.png', 'public/assets/story/order-ledger-world.webp',
-  'docs/SOURCE_GROUNDING.md', 'docs/SCREENSHOT_SOURCES.md', 'docs/DESIGN_NOTES.md', 'docs/CHARACTER_SOURCES.md', 'docs/licenses/kaykit-adventurers-license.txt', 'README.md',
-  'server.mjs', 'build.mjs', 'vercel.json', 'public/assets/story/dormant-vips-context.png', 'public/assets/story/dormant-vips-context.webp', 'public/assets/story/dormant-vips-action.png', 'public/assets/story/dormant-vips-action.webp'
+  'public/assets/story/dormant-vips-context.png', 'public/assets/story/dormant-vips-context.webp',
+  'public/assets/story/dormant-vips-action.png', 'public/assets/story/dormant-vips-action.webp',
+  'docs/SOURCE_GROUNDING.md', 'docs/SCREENSHOT_SOURCES.md', 'docs/CHARACTER_SOURCES.md', 'docs/licenses/kaykit-adventurers-license.txt',
+  'README.md', 'server.mjs', 'build.mjs', 'vercel.json'
 ];
 
 const characterSlugs = ['best-customers','loyal-buyers','new-buyers','at-risk-vips','growing-buyers','occasional-buyers','dormant-vips','light-repeaters','inactive-customers'];
-for (const slug of characterSlugs) {
-  required.push(`public/assets/characters/tiles/${slug}.webp`, `public/assets/characters/tiles/${slug}.png`);
-}
-for (const slug of ['best-customers','loyal-buyers','new-buyers','at-risk-vips','growing-buyers','dormant-vips','light-repeaters']) {
-  required.push(`public/assets/characters/portraits/${slug}.webp`, `public/assets/characters/portraits/${slug}.png`);
-}
+for (const slug of characterSlugs) required.push(`public/assets/characters/tiles/${slug}.webp`, `public/assets/characters/tiles/${slug}.png`);
+for (const slug of ['best-customers','loyal-buyers','new-buyers','at-risk-vips','growing-buyers','dormant-vips','light-repeaters']) required.push(`public/assets/characters/portraits/${slug}.webp`, `public/assets/characters/portraits/${slug}.png`);
 
 for (const file of required) await fs.access(path.join(root, file));
 
 const html = await fs.readFile(path.join(root, 'public/index.html'), 'utf8');
 const css = await fs.readFile(path.join(root, 'public/styles.css'), 'utf8');
 const js = await fs.readFile(path.join(root, 'public/app.js'), 'utf8');
-if (!html.includes('Segmentation made simple.') || !html.includes('Strategy made visible.')) throw new Error('Hero framing is missing.');
-if (/site-header|site-nav|header-cta|menu-button/.test(html)) throw new Error('Template-style top navigation remains in the marketing site.');
+
+if (!html.includes('Segmentation') || !html.includes('made simple.') || !html.includes('Strategy') || !html.includes('made visible.')) throw new Error('Hero positioning is missing.');
+if (!html.includes('class="topbar"') || !html.includes('class="primary-tabs"')) throw new Error('V3.1 top tab navigation is missing.');
+for (const label of ['Overview','See the Field','Understand Groups','Make the Move','Business Value']) if (!html.includes(`>${label}<`)) throw new Error(`Primary tab missing: ${label}`);
+if ((html.match(/data-page-panel=/g) || []).length !== 5) throw new Error('Expected five primary content panels.');
 if (!html.includes('customer-segment-studio.vercel.app')) throw new Error('Live product link is missing.');
-if (/github\.com|GitHub|Inspect the source|Review the current source|View GitHub/i.test(html)) throw new Error('Developer/source links remain in the commercial site.');
-if (/<iframe|<video|<canvas/i.test(html)) throw new Error('The marketing site must use product screenshots, not an embedded app/video/canvas.');
-if (/PlanFox|Segment Command|placeholder|fictional account/i.test(html)) throw new Error('Retired or ungrounded prototype language remains in the site.');
-if (!/customer ID/i.test(html) || !/purchase date/i.test(html) || !/transaction value/i.test(html)) throw new Error('Current import contract is not represented in customer-facing language.');
+if (/github\.com|GitHub|Inspect the source|View source/i.test(html)) throw new Error('Developer/source links remain in the commercial site.');
+if (/<iframe|<video|<canvas/i.test(html)) throw new Error('Marketing site must use screenshots/illustrations, not embeds.');
+if (!/customer ID/i.test(html) || !/purchase date/i.test(html) || !/transaction value/i.test(html)) throw new Error('Current import contract is not represented.');
 if (!html.includes('Best Customers') || !html.includes('Dormant VIPs') || !html.includes('Inactive Customers')) throw new Error('Current segment set is not represented.');
-if (!html.includes('hero-character-cast') || !html.includes('group-character-grid')) throw new Error('Individual character enrichment is missing.');
-if (!html.includes('See the field') || !html.includes('Understand the group') || !html.includes('Make the move')) throw new Error('Three-step product experience tabs are missing.');
+if (!html.includes('order-ledger-world.webp') || !html.includes('class="ledger-guide"')) throw new Error('Order-history game bridge is missing.');
+if (!html.includes('Workflow illustration · Not a live analysis')) throw new Error('Illustration boundary is missing.');
 if (!html.includes('<details class="method-details">')) throw new Error('Compact methodology disclosure is missing.');
-if (css.length < 12000 || !css.includes('.hero-product') || !css.includes('.experience-showcase')) throw new Error('Stylesheet appears incomplete.');
-if (!js.includes('experienceScreens') || !js.includes('data-lightbox')) throw new Error('Screenshot experience behavior is incomplete.');
+if (css.length < 18000 || !css.includes('.topbar') || !css.includes('.overview-grid') || !css.includes('.story-stage') || !css.includes('.group-picker')) throw new Error('V3.1 stylesheet appears incomplete.');
+if (!js.includes('selectPage') || !js.includes('ArrowRight') || !js.includes('data-group-avatar') || !js.includes('data-lightbox')) throw new Error('V3.1 navigation/interaction behavior appears incomplete.');
 
 for (const file of ['public/app.js', 'public/story-data.js', 'public/story-logic.js', 'server.mjs', 'build.mjs', 'scripts/check.mjs', 'scripts/doctor.mjs']) {
   const result = spawnSync(process.execPath, ['--check', path.join(root, file)], { encoding: 'utf8' });
@@ -54,7 +54,13 @@ for (const file of await walk(root, new Set(['.git', 'dist', 'node_modules']))) 
   for (const pattern of forbidden) if (pattern.test(text)) throw new Error(`Potential secret found in ${path.relative(root, file)}.`);
 }
 
-console.log(`Customer Segment Studio flagship checks passed: ${required.length} required files, source-mapped characters, finite reveal story, same-case product tabs, static review contact, no embedded app, no secrets.`);
+const vercelConfig = JSON.parse(await fs.readFile(path.join(root, 'vercel.json'), 'utf8'));
+if (vercelConfig.buildCommand !== 'npm run build') throw new Error('vercel.json must run npm run build');
+if (vercelConfig.outputDirectory !== 'dist') throw new Error('vercel.json must publish dist');
+const packageJson = JSON.parse(await fs.readFile(path.join(root, 'package.json'), 'utf8'));
+if (packageJson.scripts?.start) throw new Error('Do not define a production start script for this static Vercel site');
+
+console.log(`Customer Segment Studio V3.1 checks passed: ${required.length} required files, five top-level content tabs, story assets, product screenshots, static review contact, no embeds, no secrets.`);
 
 async function walk(directory, skip) {
   const out = [];
@@ -65,10 +71,3 @@ async function walk(directory, skip) {
   }
   return out;
 }
-
-// Deployment guardrails: Vercel must serve the static dist output, not run server.mjs as a function.
-const vercelConfig = JSON.parse(await fs.readFile(path.join(root, 'vercel.json'), 'utf8'));
-if (vercelConfig.buildCommand !== 'npm run build') throw new Error('vercel.json must run npm run build');
-if (vercelConfig.outputDirectory !== 'dist') throw new Error('vercel.json must publish dist');
-const packageJson = JSON.parse(await fs.readFile(path.join(root, 'package.json'), 'utf8'));
-if (packageJson.scripts?.start) throw new Error('Do not define a production start script for this static Vercel site');

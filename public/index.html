@@ -4,260 +4,251 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Customer Segment Studio turns order data into nine RFM customer groups and practical actions for growth, retention, reactivation, margin, and prioritization." name="description"/>
-<meta content="#f4f1eb" name="theme-color"/>
+<meta content="#111a25" name="theme-color"/>
 <meta content="Customer Segment Studio — Segmentation made simple. Strategy made visible." property="og:title"/>
 <meta content="Turn customer data into an interactive strategy map that shows who matters, what to do next, and where time and money can create the most value." property="og:description"/>
 <meta content="website" property="og:type"/>
 <title>Customer Segment Studio — Segmentation made simple</title>
-<link href="assets/segment-studio-mark.svg?v=2.1.2" rel="icon" type="image/svg+xml"/>
-<link as="image" href="assets/screens/living-map-dormant-vips.webp?v=2.1.2" rel="preload"/>
-<link href="styles.css?v=2.1.2" rel="stylesheet"/>
-<script defer src="story-data.js?v=2.1.2"></script>
-<script defer src="story-logic.js?v=2.1.2"></script>
-<script defer src="app.js?v=2.1.2"></script>
+<link href="assets/segment-studio-mark.svg?v=3.1.1" rel="icon" type="image/svg+xml"/>
+<link as="image" href="assets/story/order-ledger-world.webp?v=3.1.1" rel="preload"/>
+<link href="styles.css?v=3.1.1" rel="stylesheet"/>
+<script defer src="story-data.js?v=3.1.1"></script>
+<script defer src="story-logic.js?v=3.1.1"></script>
+<script defer src="app.js?v=3.1.1"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<main id="main">
-  <section class="hero section-shell" id="top">
-    <div class="hero-copy reveal">
-      <p class="eyebrow"><i></i><span data-campaign-eyebrow>INTERACTIVE CUSTOMER SEGMENTATION</span></p>
-      <h1>Segmentation made simple. <em>Strategy made visible.</em></h1>
-      <p class="hero-lede">Turn customer data into an interactive strategy map that shows who matters, what to do next, and where your time and money can create the most value.</p>
-      <p class="story-hook" data-campaign-hook>Your customer list is hiding nine different stories.</p>
-      <p class="hero-support">Upload CSV or Excel order data. Customer Segment Studio calculates nine RFM groups, then gives each group a practical objective, KPI, channel, tactic, and next move.</p>
-      <div class="hero-character-cast" aria-label="Customer Segment Studio character cast">
-        <span class="hero-character" title="Best Customers" role="img" aria-label="Best Customers character"><picture><source srcset="assets/characters/portraits/best-customers.webp?v=2.1.2" type="image/webp"/><img alt="" src="assets/characters/portraits/best-customers.png?v=2.1.2"/></picture></span>
-        <span class="hero-character" title="Loyal Buyers" role="img" aria-label="Loyal Buyers character"><picture><source srcset="assets/characters/portraits/loyal-buyers.webp?v=2.1.2" type="image/webp"/><img alt="" src="assets/characters/portraits/loyal-buyers.png?v=2.1.2"/></picture></span>
-        <span class="hero-character" title="New Buyers" role="img" aria-label="New Buyers character"><picture><source srcset="assets/characters/portraits/new-buyers.webp?v=2.1.2" type="image/webp"/><img alt="" src="assets/characters/portraits/new-buyers.png?v=2.1.2"/></picture></span>
-        <span class="hero-character" title="At-Risk VIPs" role="img" aria-label="At-Risk VIPs character"><picture><source srcset="assets/characters/portraits/at-risk-vips.webp?v=2.1.2" type="image/webp"/><img alt="" src="assets/characters/portraits/at-risk-vips.png?v=2.1.2"/></picture></span>
-        <span class="hero-character" title="Growing Buyers" role="img" aria-label="Growing Buyers character"><picture><source srcset="assets/characters/portraits/growing-buyers.webp?v=2.1.2" type="image/webp"/><img alt="" src="assets/characters/portraits/growing-buyers.png?v=2.1.2"/></picture></span>
-        <span class="hero-character" title="Dormant VIPs" role="img" aria-label="Dormant VIPs character"><picture><source srcset="assets/characters/portraits/dormant-vips.webp?v=2.1.2" type="image/webp"/><img alt="" src="assets/characters/portraits/dormant-vips.png?v=2.1.2"/></picture></span>
-        <span class="hero-character" title="Light Repeaters" role="img" aria-label="Light Repeaters character"><picture><source srcset="assets/characters/portraits/light-repeaters.webp?v=2.1.2" type="image/webp"/><img alt="" src="assets/characters/portraits/light-repeaters.png?v=2.1.2"/></picture></span>
-      </div>
-      <div class="hero-actions">
-        <a class="button button-primary" href="https://customer-segment-studio.vercel.app/" rel="noreferrer" target="_blank">Try Customer Segment Studio</a>
-      </div>
-    </div>
 
-    <figure class="hero-product reveal">
-      <div class="product-frame-label"><span><i></i> LIVING SEGMENT MAP</span><span>Demo data</span></div>
-      <div class="story-stage" data-story-stage data-phase="product">
-      <button class="image-button" data-lightbox-alt="Customer Segment Studio with Dormant VIPs selected in the living segment map." data-lightbox-src="assets/screens/living-map-dormant-vips.png?v=2.1.2" type="button">
-        <picture>
-          <source srcset="assets/screens/living-map-dormant-vips.webp?v=2.1.2" type="image/webp"/>
-          <img alt="Customer Segment Studio showing its living customer segment map and the Dormant VIPs strategy panel." height="2118" src="assets/screens/living-map-dormant-vips.png?v=2.1.2" width="3488"/>
-        </picture>
-        <span class="zoom-hint">View full screen</span>
-      </button>
+<header class="topbar" aria-label="Customer Segment Studio navigation">
+  <div class="topbar-inner">
+    <button class="brand" type="button" data-page-open="overview" aria-label="Customer Segment Studio home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Customer Segment Studio</span>
+    </button>
 
-        <div class="story-overlay" aria-hidden="true">
-          <div class="story-scene story-orders">
-            <span class="story-eyebrow">01 / THE LIST</span>
-            <h3>One list is not<br/>one audience.</h3>
-            <div class="ledger-scene">
-              <picture class="ledger-world" aria-hidden="true"><source srcset="assets/story/order-ledger-world.webp?v=2.1.2" type="image/webp"/><img src="assets/story/order-ledger-world.png?v=2.1.2" alt=""/></picture>
-              <div class="order-sheet">
-                <div class="ledger-header"><span class="ledger-mark" aria-hidden="true"></span><span><b>ORDER LEDGER</b><small>THE SAME INPUT THAT FEEDS THE MAP</small></span><i aria-hidden="true"></i></div>
-                <div class="order-head"><span>Customer ID</span><span>Purchase date</span><span>Order value</span></div>
-                <div><span class="data-bar"></span><span class="data-bar short"></span><span class="data-bar money"></span></div>
-                <div><span class="data-bar short"></span><span class="data-bar"></span><span class="data-bar money"></span></div>
-                <div><span class="data-bar"></span><span class="data-bar short"></span><span class="data-bar money"></span></div>
+    <nav class="primary-tabs" role="tablist" aria-label="Customer Segment Studio sections">
+      <button id="tab-overview" role="tab" aria-selected="true" aria-controls="panel-overview" tabindex="0" data-page-tab="overview" type="button">Overview</button>
+      <button id="tab-field" role="tab" aria-selected="false" aria-controls="panel-field" tabindex="-1" data-page-tab="field" type="button">See the Field</button>
+      <button id="tab-group" role="tab" aria-selected="false" aria-controls="panel-group" tabindex="-1" data-page-tab="group" type="button">Understand Groups</button>
+      <button id="tab-move" role="tab" aria-selected="false" aria-controls="panel-move" tabindex="-1" data-page-tab="move" type="button">Make the Move</button>
+      <button id="tab-value" role="tab" aria-selected="false" aria-controls="panel-value" tabindex="-1" data-page-tab="value" type="button">Business Value</button>
+    </nav>
+
+    <a class="topbar-cta" href="https://customer-segment-studio.vercel.app/" rel="noreferrer" target="_blank">Try Customer Segment Studio</a>
+  </div>
+</header>
+
+<main id="main" class="site-main">
+  <section class="page-panel overview-panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" data-page-panel="overview">
+    <div class="overview-shell">
+      <div class="overview-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker" data-campaign-eyebrow>SAME DATA. DIFFERENT STORIES.</p>
+          <h1>Segmentation<br/>made simple.<em>Strategy<br/>made visible.</em></h1>
+          <p class="hero-lede">Turn customer data into an interactive strategy map that shows who matters, what to do next, and where your time and money can create the most value.</p>
+          <p class="story-hook" data-campaign-hook>Your customer list is hiding nine different stories.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://customer-segment-studio.vercel.app/" rel="noreferrer" target="_blank">Try Customer Segment Studio <span aria-hidden="true">→</span></a>
+            <button class="button button-secondary" type="button" data-page-open="field"><span class="play-dot" aria-hidden="true">▶</span> See it in action</button>
+          </div>
+          <div class="mini-proof" aria-label="Product highlights">
+            <div><span class="proof-icon bars" aria-hidden="true"></span><strong>Nine clear groups</strong><small>From data to decisions</small></div>
+            <div><span class="proof-icon bolt" aria-hidden="true">◆</span><strong>Practical next steps</strong><small>Built for real teams</small></div>
+            <div><span class="proof-icon people" aria-hidden="true">●●</span><strong>Works with your data</strong><small>CSV or Excel, ready in minutes</small></div>
+          </div>
+        </div>
+
+        <figure class="hero-product-card">
+          <div class="product-topline"><span><i></i> LIVING SEGMENT MAP</span><span>DEMO DATA</span></div>
+          <div class="story-stage" data-story-stage data-phase="orders">
+            <button class="image-button product-image-button" data-lightbox-alt="Customer Segment Studio with Dormant VIPs selected in the living segment map." data-lightbox-src="assets/screens/living-map-dormant-vips.png?v=3.1.1" type="button">
+              <picture>
+                <source srcset="assets/screens/living-map-dormant-vips.webp?v=3.1.1" type="image/webp"/>
+                <img alt="Customer Segment Studio showing its living customer segment map and the Dormant VIPs strategy panel." height="2118" src="assets/screens/living-map-dormant-vips.png?v=3.1.1" width="3488"/>
+              </picture>
+              <span class="zoom-hint">Open product screen</span>
+            </button>
+
+            <div class="story-overlay" aria-hidden="true">
+              <div class="story-scene story-orders">
+                <div class="story-heading-row">
+                  <span class="story-eyebrow"><i></i> 01 / ORDER HISTORY</span>
+                  <span>DEMO DATA</span>
+                </div>
+                <h3>One list is not<br/>one audience.</h3>
+                <p class="story-subhead">The same customer data can hide very different stories.</p>
+                <div class="ledger-scene">
+                  <picture class="ledger-world" aria-hidden="true"><source srcset="assets/story/order-ledger-world.webp?v=3.1.1" type="image/webp"/><img src="assets/story/order-ledger-world.png?v=3.1.1" alt=""/></picture>
+                  <div class="order-sheet" aria-hidden="true">
+                    <div class="ledger-title">ORDER LEDGER</div>
+                    <div class="order-head"><span>Customer ID</span><span>Purchase date</span><span>Order value</span></div>
+                    <div class="order-row"><span>C-10028</span><span>2024-05-12</span><span>$120.00</span></div>
+                    <div class="order-row"><span>C-10029</span><span>2024-05-14</span><span>$85.00</span></div>
+                    <div class="order-row"><span>C-10030</span><span>2024-05-16</span><span>$240.00</span></div>
+                    <div class="order-row"><span>C-10031</span><span>2024-05-18</span><span>$65.00</span></div>
+                    <div class="order-row"><span>C-10032</span><span>2024-05-20</span><span>$310.00</span></div>
+                  </div>
+                  <div class="ledger-guide" aria-hidden="true">
+                    <picture><source srcset="assets/characters/portraits/loyal-buyers.webp?v=3.1.1" type="image/webp"/><img src="assets/characters/portraits/loyal-buyers.png?v=3.1.1" alt="" width="420" height="480"/></picture>
+                  </div>
+                  <div class="story-blackboard" aria-hidden="true">Different<br/>customers.<br/>Different needs.<br/>Different moves.</div>
+                </div>
               </div>
-              <div class="ledger-guide" aria-hidden="true">
-                <picture><source srcset="assets/characters/portraits/loyal-buyers.webp?v=2.1.2" type="image/webp"/><img src="assets/characters/portraits/loyal-buyers.png?v=2.1.2" alt="" width="420" height="480"/></picture>
+
+              <div class="story-scene story-groups">
+                <div class="story-heading-row"><span class="story-eyebrow"><i></i> 02 / NINE GROUPS</span><span>DEMO DATA</span></div>
+                <h3>Nine groups.<br/>Different situations.</h3>
+                <p class="story-subhead">The list becomes a map of different customer states.</p>
+                <div class="reveal-people">
+                  <div class="reveal-person" style="--i:0"><img src="assets/characters/tiles/best-customers.webp?v=3.1.1" width="420" height="350" alt=""/><span>Best Customers</span></div>
+                  <div class="reveal-person" style="--i:1"><img src="assets/characters/tiles/loyal-buyers.webp?v=3.1.1" width="420" height="350" alt=""/><span>Loyal Buyers</span></div>
+                  <div class="reveal-person" style="--i:2"><img src="assets/characters/tiles/new-buyers.webp?v=3.1.1" width="420" height="350" alt=""/><span>New Buyers</span></div>
+                  <div class="reveal-person" style="--i:3"><img src="assets/characters/tiles/at-risk-vips.webp?v=3.1.1" width="420" height="350" alt=""/><span>At-Risk VIPs</span></div>
+                  <div class="reveal-person" style="--i:4"><img src="assets/characters/tiles/growing-buyers.webp?v=3.1.1" width="420" height="350" alt=""/><span>Growing Buyers</span></div>
+                  <div class="reveal-person" style="--i:5"><img src="assets/characters/tiles/occasional-buyers.webp?v=3.1.1" width="420" height="350" alt=""/><span>Occasional Buyers</span></div>
+                  <div class="reveal-person" style="--i:6"><img src="assets/characters/tiles/dormant-vips.webp?v=3.1.1" width="420" height="350" alt=""/><span>Dormant VIPs</span></div>
+                  <div class="reveal-person" style="--i:7"><img src="assets/characters/tiles/light-repeaters.webp?v=3.1.1" width="420" height="350" alt=""/><span>Light Repeaters</span></div>
+                  <div class="reveal-person" style="--i:8"><img src="assets/characters/tiles/inactive-customers.webp?v=3.1.1" width="420" height="350" alt=""/><span>Inactive Customers</span></div>
+                </div>
               </div>
+
+              <div class="story-scene story-move">
+                <div class="story-heading-row"><span class="story-eyebrow"><i></i> 03 / NEXT MOVE</span><span>DEMO DATA</span></div>
+                <div class="move-layout">
+                  <div class="move-character"><img src="assets/characters/portraits/dormant-vips.webp?v=3.1.1" width="420" height="520" alt=""/></div>
+                  <div class="move-story"><h3>Dormant VIPs.</h3><p>Past value.<br/>Present silence.</p><strong>Test a win-back.</strong><span>Give them a relevant reason to return.</span></div>
+                </div>
+              </div>
+              <span class="illustration-label">Workflow illustration · Not a live analysis</span>
             </div>
-            <p>Recency. Frequency. Monetary value.</p>
           </div>
-          <div class="story-scene story-groups">
-            <span class="story-eyebrow">02 / THE REVEAL</span>
-            <h3>Nine groups.<br/>Different situations.</h3>
-            <div class="reveal-people"><div class="reveal-person" style="--i:0"><img src="assets/characters/tiles/best-customers.webp?v=2.1.2" width="420" height="350" alt=""/><span>Best Customers</span></div>
-<div class="reveal-person" style="--i:1"><img src="assets/characters/tiles/loyal-buyers.webp?v=2.1.2" width="420" height="350" alt=""/><span>Loyal Buyers</span></div>
-<div class="reveal-person" style="--i:2"><img src="assets/characters/tiles/new-buyers.webp?v=2.1.2" width="420" height="350" alt=""/><span>New Buyers</span></div>
-<div class="reveal-person" style="--i:3"><img src="assets/characters/tiles/at-risk-vips.webp?v=2.1.2" width="420" height="350" alt=""/><span>At-Risk VIPs</span></div>
-<div class="reveal-person" style="--i:4"><img src="assets/characters/tiles/growing-buyers.webp?v=2.1.2" width="420" height="350" alt=""/><span>Growing Buyers</span></div>
-<div class="reveal-person" style="--i:5"><img src="assets/characters/tiles/occasional-buyers.webp?v=2.1.2" width="420" height="350" alt=""/><span>Occasional Buyers</span></div>
-<div class="reveal-person" style="--i:6"><img src="assets/characters/tiles/dormant-vips.webp?v=2.1.2" width="420" height="350" alt=""/><span>Dormant VIPs</span></div>
-<div class="reveal-person" style="--i:7"><img src="assets/characters/tiles/light-repeaters.webp?v=2.1.2" width="420" height="350" alt=""/><span>Light Repeaters</span></div>
-<div class="reveal-person" style="--i:8"><img src="assets/characters/tiles/inactive-customers.webp?v=2.1.2" width="420" height="350" alt=""/><span>Inactive Customers</span></div></div>
+          <div class="story-controls" data-story-controls>
+            <div class="story-progress" role="group" aria-label="Product story steps">
+              <button class="is-active" type="button" data-story-step="orders">01 <span>Order history</span></button>
+              <button type="button" data-story-step="groups">02 <span>Nine groups</span></button>
+              <button type="button" data-story-step="move">03 <span>Next move</span></button>
+            </div>
+            <div class="story-playback"><button type="button" data-story-toggle>Play story</button><button type="button" data-story-skip>Show product <span aria-hidden="true">→</span></button></div>
           </div>
-          <div class="story-scene story-move">
-            <div class="move-character"><img src="assets/characters/portraits/dormant-vips.webp?v=2.1.2" width="420" height="520" alt=""/></div>
-            <div class="move-story"><span class="story-eyebrow">03 / THE NEXT MOVE</span><h3>Dormant VIPs.</h3><p>Past value.<br/>Present silence.</p><strong>Test a win-back.</strong><span>Give them a relevant reason to return.</span></div>
-          </div>
-          <span class="illustration-label">Workflow illustration · Not a live analysis</span>
-        </div>
-      </div>
-      <div class="story-controls" data-story-controls hidden>
-        <div class="story-progress" role="group" aria-label="Product story steps">
-          <button type="button" data-story-step="orders">01 <span>Order history</span></button>
-          <button type="button" data-story-step="groups">02 <span>Nine groups</span></button>
-          <button type="button" data-story-step="move">03 <span>Next move</span></button>
-        </div>
-        <div class="story-playback"><button type="button" data-story-toggle>Play story</button><button type="button" data-story-skip>Show product</button></div>
-      </div>
-      <figcaption><strong>See the groups. Choose the next move.</strong><span>Actual product screen · Demo data · Open the image to inspect.</span></figcaption>
-    </figure>
-  </section>
-
-  <section aria-label="Current product capabilities" class="proof-strip">
-    <div class="section-shell proof-strip-inner">
-      <span>CSV + Excel input</span><i></i><span>Recency · Frequency · Monetary</span><i></i><span>Nine customer groups</span><i></i><span>Revenue share</span><i></i><span>Objective · KPI · next move</span>
-    </div>
-  </section>
-
-  <section class="experience-section" id="product">
-    <div class="section-shell">
-      <div class="section-heading section-heading-light reveal">
-        <p class="section-kicker light">THE PRODUCT EXPERIENCE</p>
-        <h2>See the field. Understand the group. Make the move.</h2>
-        <p>Follow one group from the whole customer map to a clear next move. Same product example. Different levels of understanding.</p>
+        </figure>
       </div>
 
-      <p class="case-label"><span></span> ONE WALKTHROUGH <b>Dormant VIPs</b> <small>Demo data shown</small></p>
-      <div class="experience-showcase reveal" data-experience-gallery>
-        <div aria-label="Customer Segment Studio product experience" class="experience-tabs" role="tablist">
-          <button aria-selected="true" class="is-active" data-experience="field" id="experience-tab-field" aria-controls="experience-panel" tabindex="0" role="tab" type="button"><span>01</span>See the field</button>
-          <button aria-selected="false" data-experience="group" id="experience-tab-group" aria-controls="experience-panel" tabindex="-1" role="tab" type="button"><span>02</span>Understand the group</button>
-          <button aria-selected="false" data-experience="move" id="experience-tab-move" aria-controls="experience-panel" tabindex="-1" role="tab" type="button"><span>03</span>Make the move</button>
-        </div>
+      <div class="overview-bottom">
+        <section class="segment-rail" aria-label="Nine customer segments">
+          <p>NINE CUSTOMER SEGMENTS. NINE DIFFERENT OPPORTUNITIES.</p>
+          <div class="segment-rail-grid">
+            <button type="button" data-group-open="best-customers"><img src="assets/characters/portraits/best-customers.webp?v=3.1.1" alt=""/><strong>Best</strong><span>Customers</span></button>
+            <button type="button" data-group-open="loyal-buyers"><img src="assets/characters/portraits/loyal-buyers.webp?v=3.1.1" alt=""/><strong>Loyal</strong><span>Buyers</span></button>
+            <button type="button" data-group-open="new-buyers"><img src="assets/characters/portraits/new-buyers.webp?v=3.1.1" alt=""/><strong>New</strong><span>Buyers</span></button>
+            <button type="button" data-group-open="at-risk-vips"><img src="assets/characters/portraits/at-risk-vips.webp?v=3.1.1" alt=""/><strong>At-Risk</strong><span>VIPs</span></button>
+            <button type="button" data-group-open="growing-buyers"><img src="assets/characters/portraits/growing-buyers.webp?v=3.1.1" alt=""/><strong>Growing</strong><span>Buyers</span></button>
+            <button type="button" data-group-open="occasional-buyers"><img class="tile-art" src="assets/characters/tiles/occasional-buyers.webp?v=3.1.1" alt=""/><strong>Occasional</strong><span>Buyers</span></button>
+            <button type="button" data-group-open="dormant-vips"><img src="assets/characters/portraits/dormant-vips.webp?v=3.1.1" alt=""/><strong>Dormant</strong><span>VIPs</span></button>
+            <button type="button" data-group-open="light-repeaters"><img src="assets/characters/portraits/light-repeaters.webp?v=3.1.1" alt=""/><strong>Light</strong><span>Repeaters</span></button>
+            <button type="button" data-group-open="inactive-customers"><img class="tile-art" src="assets/characters/tiles/inactive-customers.webp?v=3.1.1" alt=""/><strong>Inactive</strong><span>Customers</span></button>
+          </div>
+        </section>
 
-        <div id="experience-panel" class="experience-panel" role="tabpanel" tabindex="0" aria-labelledby="experience-tab-field">
-        <div class="experience-stage">
-          <button class="image-button experience-image-button" data-experience-image data-lightbox-alt="Customer Segment Studio with Dormant VIPs selected." data-lightbox-src="assets/screens/living-map-dormant-vips.png?v=2.1.2" type="button">
-            <picture>
-              <source data-experience-source srcset="assets/screens/living-map-dormant-vips.webp?v=2.1.2" type="image/webp"/>
-              <img alt="Customer Segment Studio with Dormant VIPs selected." data-experience-img height="2118" src="assets/screens/living-map-dormant-vips.png?v=2.1.2" width="3488"/>
-            </picture>
-            <span class="zoom-hint">View full screen</span>
-          </button>
-        </div>
-
-        <aside aria-live="polite" class="experience-brief">
-          <div class="experience-character"><img src="assets/characters/portraits/dormant-vips.webp?v=2.1.2" alt="Dormant VIPs character" width="420" height="520"/><div><span>DORMANT VIPS</span><strong>Test a win-back</strong></div></div>
-          <span data-experience-kicker>01 / SEE THE FIELD</span>
-          <h3 data-experience-title>One group within the whole picture.</h3>
-          <p data-experience-copy>In this product example, Dormant VIPs account for 64 customers and 13% of historical revenue. Start by seeing that group in the context of the whole customer base.</p>
-          <dl>
-            <div><dt>Business question</dt><dd data-experience-question>Which group deserves a closer look?</dd></div>
-            <div><dt>What becomes visible</dt><dd data-experience-visible>The customer mix, historical contribution, and different purchase patterns.</dd></div>
-            <div><dt>Why it matters</dt><dd data-experience-why>Do not give a dormant former buyer the same treatment as someone who just made a first purchase.</dd></div>
-          </dl>
-          <p class="case-boundary">Historical contribution, not a revenue forecast. Suggested actions are ideas to test.</p>
+        <aside class="review-card">
+          <h2>What is your customer list hiding?</h2>
+          <p>Get a personalized take on your segmentation opportunity.</p>
+          <a class="review-button" href="mailto:simon.yam227@gmail.com?subject=Customer%20Segment%20Studio%20%E2%80%94%20segmentation%20review" data-open-review>Request a segmentation review <span aria-hidden="true">→</span></a>
         </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-panel detail-panel" id="panel-field" role="tabpanel" aria-labelledby="tab-field" data-page-panel="field" hidden>
+    <div class="detail-shell">
+      <div class="detail-heading"><p class="detail-kicker">01 / SEE THE FIELD</p><h2>Start with the whole customer picture.</h2><p>One customer list can contain very different purchase patterns. The first step is seeing where each group sits before choosing what to do.</p></div>
+      <div class="detail-grid">
+        <div class="screen-card">
+          <div class="screen-card-label"><span><i></i> ACTUAL PRODUCT SCREEN</span><span>DEMO DATA</span></div>
+          <button class="image-button" data-lightbox-alt="Customer Segment Studio with Dormant VIPs selected. Demo data." data-lightbox-src="assets/screens/living-map-dormant-vips.png?v=3.1.1" type="button"><picture><source srcset="assets/screens/living-map-dormant-vips.webp?v=3.1.1" type="image/webp"/><img src="assets/screens/living-map-dormant-vips.png?v=3.1.1" alt="Customer Segment Studio with Dormant VIPs selected. Demo data." width="3488" height="2118"/></picture><span class="zoom-hint">View full screen</span></button>
         </div>
-      </div>
-
-      <div class="game-note reveal">
-        <strong>Why game-like?</strong>
-        <p>Customer strategy already has different groups, limited resources, competing priorities, and a next move. The visual layer makes those differences easier to see; the metrics and actions keep the decisions grounded.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="value-section" id="business-value">
-    <div class="section-shell value-inner">
-      <div class="section-heading reveal">
-        <p class="section-kicker">BUSINESS VALUE</p>
-        <h2>Different customers deserve different strategies.</h2>
-        <p>Customer Segment Studio does not promise that a segment causes an outcome. It gives teams a clearer way to direct follow-up, offers, and attention based on observed purchase behavior.</p>
-      </div>
-      <div class="value-columns">
-        <article class="value-column top-line reveal">
-          <span>GROW REVENUE</span><h3>Put growth effort where the signal is stronger.</h3>
-          <ul><li>Protect repeat customers who already create value.</li><li>Move new and growing buyers toward a second or deeper purchase.</li><li>Re-engage high-value customers whose activity has weakened.</li><li>Use group-specific messaging instead of one campaign for everyone.</li></ul>
-        <div class="value-cast"><span class="value-character"><img src="assets/characters/tiles/new-buyers.webp?v=2.1.2" loading="lazy" alt="" width="420" height="350"/><span>New Buyers<small>Next purchase</small></span></span><span class="value-character"><img src="assets/characters/tiles/growing-buyers.webp?v=2.1.2" loading="lazy" alt="" width="420" height="350"/><span>Growing Buyers<small>Build momentum</small></span></span><span class="value-character"><img src="assets/characters/tiles/dormant-vips.webp?v=2.1.2" loading="lazy" alt="" width="420" height="350"/><span>Dormant VIPs<small>Test win-back</small></span></span></div></article>
-        <article class="value-column bottom-line reveal">
-          <span>SPEND SMARTER</span><h3>Use attention and discounting more deliberately.</h3>
-          <ul><li>Defend margin instead of defaulting to bigger discounts.</li><li>Use lower-cost channels before expensive reactivation.</li><li>Deprioritize long-tail inactive customers when the signal is weak.</li><li>Focus effort where historical contribution and purchase gaps are clearer.</li></ul>
-        <div class="value-cast"><span class="value-character"><img src="assets/characters/tiles/best-customers.webp?v=2.1.2" loading="lazy" alt="" width="420" height="350"/><span>Best Customers<small>Protect value</small></span></span><span class="value-character"><img src="assets/characters/tiles/occasional-buyers.webp?v=2.1.2" loading="lazy" alt="" width="420" height="350"/><span>Occasional Buyers<small>Stay relevant</small></span></span><span class="value-character"><img src="assets/characters/tiles/inactive-customers.webp?v=2.1.2" loading="lazy" alt="" width="420" height="350"/><span>Inactive Customers<small>Be selective</small></span></span></div></article>
+        <aside class="insight-card">
+          <div class="selected-character"><img src="assets/characters/portraits/dormant-vips.webp?v=3.1.1" alt="Dormant VIPs character"/><div><span>DORMANT VIPS</span><strong>Test a win-back</strong></div></div>
+          <h3>One group within the whole picture.</h3>
+          <p>In this demo example, Dormant VIPs account for 64 customers and 13% of historical revenue.</p>
+          <dl><div><dt>Business question</dt><dd>Which group deserves a closer look?</dd></div><div><dt>What becomes visible</dt><dd>The customer mix, historical contribution, and different purchase patterns.</dd></div><div><dt>Why it matters</dt><dd>A dormant former buyer should not automatically receive the same treatment as someone who just made a first purchase.</dd></div></dl>
+          <p class="boundary">Historical contribution, not a revenue forecast.</p>
+          <button class="next-tab" type="button" data-page-open="group">Next: Understand Groups <span aria-hidden="true">→</span></button>
+        </aside>
       </div>
     </div>
   </section>
 
-  <section class="how-section section-shell" id="how-it-works">
-    <div class="section-heading split-heading reveal">
-      <div><p class="section-kicker">HOW IT WORKS</p><h2>From order history to a clearer customer strategy.</h2></div>
-      <p>The current product uses a simple RFM foundation: Recency, Frequency, and Monetary value. The calculations stay deterministic; the strategy layer makes the result easier to use.</p>
-    </div>
-
-    <div class="how-layout">
-      <div class="how-flow reveal">
-        <article><span>01</span><div><h3>Bring order data</h3><p>Upload CSV or Excel with a customer ID, purchase date, and transaction value.</p></div></article>
-        <article><span>02</span><div><h3>Calculate RFM signals</h3><p>The product aggregates purchases by customer and calculates recency, frequency, and monetary signals.</p></div></article>
-        <article><span>03</span><div><h3>Form nine groups</h3><p>Customers are placed into nine clear groups, with customer count, revenue share, and commercial context recalculated from the dataset.</p></div></article>
-        <article><span>04</span><div><h3>Choose the next move</h3><p>Each group is paired with an objective, KPI, channel, action, message, tactic, and time horizon.</p></div></article>
-      </div>
-
-      <aside class="trust-panel reveal">
-        <p class="mini-kicker">THE NINE GROUPS</p><p class="group-intro">Not every customer needs the same move.</p>
-        <div class="group-pills group-character-grid" aria-label="Nine customer groups">
-          <button type="button" class="group-character group-best-customers" data-group="best-customers" aria-pressed="false">
-            <picture><source srcset="assets/characters/tiles/best-customers.webp?v=2.1.2" type="image/webp"/><img alt="Knight character representing Best Customers" loading="lazy" src="assets/characters/tiles/best-customers.png?v=2.1.2"/></picture>
-            <strong>Best Customers</strong><span class="group-action">Protect value</span>
-          </button>
-          <button type="button" class="group-character group-loyal-buyers" data-group="loyal-buyers" aria-pressed="false">
-            <picture><source srcset="assets/characters/tiles/loyal-buyers.webp?v=2.1.2" type="image/webp"/><img alt="Ranger character representing Loyal Buyers" loading="lazy" src="assets/characters/tiles/loyal-buyers.png?v=2.1.2"/></picture>
-            <strong>Loyal Buyers</strong><span class="group-action">Sustain loyalty</span>
-          </button>
-          <button type="button" class="group-character group-new-buyers" data-group="new-buyers" aria-pressed="false">
-            <picture><source srcset="assets/characters/tiles/new-buyers.webp?v=2.1.2" type="image/webp"/><img alt="Druid character representing New Buyers" loading="lazy" src="assets/characters/tiles/new-buyers.png?v=2.1.2"/></picture>
-            <strong>New Buyers</strong><span class="group-action">Guide the next purchase</span>
-          </button>
-          <button type="button" class="group-character group-at-risk-vips" data-group="at-risk-vips" aria-pressed="false">
-            <picture><source srcset="assets/characters/tiles/at-risk-vips.webp?v=2.1.2" type="image/webp"/><img alt="Barbarian character representing At-Risk VIPs" loading="lazy" src="assets/characters/tiles/at-risk-vips.png?v=2.1.2"/></picture>
-            <strong>At-Risk VIPs</strong><span class="group-action">Review the slowdown</span>
-          </button>
-          <button type="button" class="group-character group-growing-buyers" data-group="growing-buyers" aria-pressed="false">
-            <picture><source srcset="assets/characters/tiles/growing-buyers.webp?v=2.1.2" type="image/webp"/><img alt="Engineer character representing Growing Buyers" loading="lazy" src="assets/characters/tiles/growing-buyers.png?v=2.1.2"/></picture>
-            <strong>Growing Buyers</strong><span class="group-action">Build momentum</span>
-          </button>
-          <button type="button" class="group-character group-occasional-buyers" data-group="occasional-buyers" aria-pressed="false">
-            <picture><source srcset="assets/characters/tiles/occasional-buyers.webp?v=2.1.2" type="image/webp"/><img alt="Rogue character representing Occasional Buyers" loading="lazy" src="assets/characters/tiles/occasional-buyers.png?v=2.1.2"/></picture>
-            <strong>Occasional Buyers</strong><span class="group-action">Find the right occasion</span>
-          </button>
-          <button type="button" class="group-character group-dormant-vips" data-group="dormant-vips" aria-pressed="true">
-            <picture><source srcset="assets/characters/tiles/dormant-vips.webp?v=2.1.2" type="image/webp"/><img alt="Alternate Barbarian character representing Dormant VIPs" loading="lazy" src="assets/characters/tiles/dormant-vips.png?v=2.1.2"/></picture>
-            <strong>Dormant VIPs</strong><span class="group-action">Test a win-back</span>
-          </button>
-          <button type="button" class="group-character group-light-repeaters" data-group="light-repeaters" aria-pressed="false">
-            <picture><source srcset="assets/characters/tiles/light-repeaters.webp?v=2.1.2" type="image/webp"/><img alt="Mage character representing Light Repeaters" loading="lazy" src="assets/characters/tiles/light-repeaters.png?v=2.1.2"/></picture>
-            <strong>Light Repeaters</strong><span class="group-action">Build the repeat habit</span>
-          </button>
-          <button type="button" class="group-character group-inactive-customers" data-group="inactive-customers" aria-pressed="false">
-            <picture><source srcset="assets/characters/tiles/inactive-customers.webp?v=2.1.2" type="image/webp"/><img alt="Hooded Rogue character representing Inactive Customers" loading="lazy" src="assets/characters/tiles/inactive-customers.png?v=2.1.2"/></picture>
-            <strong>Inactive Customers</strong><span class="group-action">Keep outreach selective</span>
-          </button>
+  <section class="page-panel detail-panel" id="panel-group" role="tabpanel" aria-labelledby="tab-group" data-page-panel="group" hidden>
+    <div class="detail-shell">
+      <div class="detail-heading"><p class="detail-kicker">02 / UNDERSTAND GROUPS</p><h2>Different groups carry different signals.</h2><p>Select any customer group to see the purchase signal and a practical strategy prompt. The visual layer explains the segmentation; it does not simulate customer sentiment.</p></div>
+      <div class="group-detail-grid">
+        <div class="screen-card crop-card">
+          <div class="screen-card-label"><span><i></i> SAME PRODUCT EXAMPLE</span><span>DEMO DATA</span></div>
+          <button class="image-button" data-lightbox-alt="Unedited crop of the Dormant VIPs screen showing customer count, revenue share and historical revenue." data-lightbox-src="assets/story/dormant-vips-context.png?v=3.1.1" type="button"><picture><source srcset="assets/story/dormant-vips-context.webp?v=3.1.1" type="image/webp"/><img src="assets/story/dormant-vips-context.png?v=3.1.1" alt="Unedited crop of the same Dormant VIPs product screen." width="1213" height="751"/></picture><span class="zoom-hint">View full screen</span></button>
         </div>
+        <aside class="group-insight-card" aria-live="polite">
+          <div class="group-avatar"><img data-group-avatar src="assets/characters/tiles/dormant-vips.webp?v=3.1.1" alt="Dormant VIPs character"/></div>
+          <span class="group-overline">SELECTED GROUP</span>
+          <h3 data-group-name>Dormant VIPs</h3>
+          <strong data-group-action>Test a win-back</strong>
+          <p data-group-signal>Past value is substantial. Recent purchasing has gone quiet.</p>
+          <div class="group-move"><span>Suggested next move</span><p data-group-move>Use a strong comeback reason before spending more to reactivate.</p></div>
+          <small>Strategy prompts, not customer quotes or predicted outcomes.</small>
+        </aside>
+      </div>
 
-        <div class="group-story" aria-live="polite" aria-atomic="true"><span>SELECT A CHARACTER TO READ THE SIGNAL</span><h3 data-group-name>Dormant VIPs</h3><p data-group-signal>Past value is substantial. Recent purchasing has gone quiet.</p><strong data-group-action>Test a win-back</strong><p data-group-move>Use a strong comeback reason before spending more to reactivate.</p><small>Strategy prompts, not customer quotes or predicted outcomes.</small></div>
-        <details class="method-details">
-          <summary>How the analysis works</summary>
-          <div class="method-details-body">
-            <div><strong>Calculated</strong><p>Customer aggregation, total revenue, customer count, RFM placement, and segment revenue share are produced by deterministic code.</p></div>
-            <div><strong>Guidance</strong><p>Objective, KPI, best channel, action preview, messaging angle, tactic, and time horizon explain how to use each group.</p></div>
-            <div><strong>Optional AI</strong><p>When AI assistance is enabled, it can refine strategic wording from segment-level metrics. It does not change customer counts, total revenue, revenue share, or group labels.</p></div>
-            <div><strong>Boundary</strong><p>The studio does not claim churn prediction, causal uplift, LTV, CAC, or profitability from data the user did not provide.</p></div>
-          </div>
-        </details>
-      </aside>
+      <div class="group-picker" aria-label="Nine customer groups">
+        <button type="button" data-group="best-customers" aria-pressed="false"><img src="assets/characters/tiles/best-customers.webp?v=3.1.1" alt=""/><span>Best Customers</span></button>
+        <button type="button" data-group="loyal-buyers" aria-pressed="false"><img src="assets/characters/tiles/loyal-buyers.webp?v=3.1.1" alt=""/><span>Loyal Buyers</span></button>
+        <button type="button" data-group="new-buyers" aria-pressed="false"><img src="assets/characters/tiles/new-buyers.webp?v=3.1.1" alt=""/><span>New Buyers</span></button>
+        <button type="button" data-group="at-risk-vips" aria-pressed="false"><img src="assets/characters/tiles/at-risk-vips.webp?v=3.1.1" alt=""/><span>At-Risk VIPs</span></button>
+        <button type="button" data-group="growing-buyers" aria-pressed="false"><img src="assets/characters/tiles/growing-buyers.webp?v=3.1.1" alt=""/><span>Growing Buyers</span></button>
+        <button type="button" data-group="occasional-buyers" aria-pressed="false"><img src="assets/characters/tiles/occasional-buyers.webp?v=3.1.1" alt=""/><span>Occasional Buyers</span></button>
+        <button type="button" data-group="dormant-vips" aria-pressed="true"><img src="assets/characters/tiles/dormant-vips.webp?v=3.1.1" alt=""/><span>Dormant VIPs</span></button>
+        <button type="button" data-group="light-repeaters" aria-pressed="false"><img src="assets/characters/tiles/light-repeaters.webp?v=3.1.1" alt=""/><span>Light Repeaters</span></button>
+        <button type="button" data-group="inactive-customers" aria-pressed="false"><img src="assets/characters/tiles/inactive-customers.webp?v=3.1.1" alt=""/><span>Inactive Customers</span></button>
+      </div>
+      <div class="method-line"><details class="method-details"><summary>How the analysis works</summary><div class="method-details-body"><div><strong>Calculated</strong><p>Customer aggregation, total revenue, customer count, RFM placement, and segment revenue share are produced by deterministic code.</p></div><div><strong>Guidance</strong><p>Objective, KPI, best channel, action preview, messaging angle, tactic, and time horizon explain how to use each group.</p></div><div><strong>Boundary</strong><p>The studio does not claim churn prediction, causal uplift, LTV, CAC, or profitability from data the user did not provide.</p></div></div></details><button class="next-tab" type="button" data-page-open="move">Next: Make the Move <span aria-hidden="true">→</span></button></div>
     </div>
   </section>
 
-  <section class="final-cta" id="review">
-    <div class="section-shell final-cta-inner reveal">
-      <p class="section-kicker light">YOUR CUSTOMER BASE</p>
-      <h2>What is your customer<br/>list hiding?</h2>
-      <p>I help teams turn order data into practical retention, repeat-purchase, and win-back priorities.</p>
-      <div class="review-actions"><a class="button button-light" href="mailto:simon.yam227@gmail.com?subject=Customer%20Segment%20Studio%20%E2%80%94%20segmentation%20review" data-open-review>Request a segmentation review</a><a class="try-link" href="https://customer-segment-studio.vercel.app/" target="_blank" rel="noreferrer">Or try the studio yourself <span aria-hidden="true">↗</span></a></div>
-      <p class="review-reassurance">Start with the question. No customer data needed.</p>
+  <section class="page-panel detail-panel" id="panel-move" role="tabpanel" aria-labelledby="tab-move" data-page-panel="move" hidden>
+    <div class="detail-shell">
+      <div class="detail-heading"><p class="detail-kicker">03 / MAKE THE MOVE</p><h2>Turn the segment into a testable next move.</h2><p>The product connects each group to an objective, KPI, channel, tactic, and time horizon so the segmentation becomes easier to act on.</p></div>
+      <div class="detail-grid move-detail-grid">
+        <div class="screen-card crop-card action-screen">
+          <div class="screen-card-label"><span><i></i> SAME PRODUCT EXAMPLE</span><span>DEMO DATA</span></div>
+          <button class="image-button" data-lightbox-alt="Unedited crop of the Dormant VIPs screen showing its KPI, reactivation objective, action preview, messaging angle and tactic." data-lightbox-src="assets/story/dormant-vips-action.png?v=3.1.1" type="button"><picture><source srcset="assets/story/dormant-vips-action.webp?v=3.1.1" type="image/webp"/><img src="assets/story/dormant-vips-action.png?v=3.1.1" alt="Unedited crop of the same Dormant VIPs screen showing the suggested action." width="1213" height="905"/></picture><span class="zoom-hint">View full screen</span></button>
+        </div>
+        <aside class="insight-card move-card">
+          <div class="selected-character"><img src="assets/characters/portraits/dormant-vips.webp?v=3.1.1" alt="Dormant VIPs character"/><div><span>DORMANT VIPS</span><strong>Test a win-back</strong></div></div>
+          <h3>Test a reason to return.</h3>
+          <p>The product suggests a relevant comeback reason before spending more to reactivate. Use the objective, channel, KPI, and time horizon to frame a business test.</p>
+          <div class="move-steps"><div><span>01</span><strong>Objective</strong><p>Reactivation</p></div><div><span>02</span><strong>Channel</strong><p>Email</p></div><div><span>03</span><strong>KPI</strong><p>Return / purchase response</p></div><div><span>04</span><strong>Review</strong><p>14-day window</p></div></div>
+          <p class="boundary">A suggested action is a starting point for a business decision, not proof that a campaign will work.</p>
+          <button class="next-tab" type="button" data-page-open="value">Next: Business Value <span aria-hidden="true">→</span></button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-panel detail-panel value-panel" id="panel-value" role="tabpanel" aria-labelledby="tab-value" data-page-panel="value" hidden>
+    <div class="detail-shell">
+      <div class="detail-heading value-heading"><p class="detail-kicker">BUSINESS VALUE</p><h2>Different customers deserve different strategies.</h2><p>Customer Segment Studio gives teams a clearer way to direct follow-up, offers, and attention based on observed purchase behavior.</p></div>
+      <div class="value-grid">
+        <article class="value-card"><span class="value-kicker">GROW REVENUE</span><h3>Put growth effort where the signal is stronger.</h3><ul><li>Protect repeat customers who already create value.</li><li>Move new and growing buyers toward another purchase.</li><li>Re-engage high-value customers whose activity has weakened.</li><li>Use group-specific messaging instead of one campaign for everyone.</li></ul><div class="value-characters"><img src="assets/characters/portraits/new-buyers.webp?v=3.1.1" alt=""/><img src="assets/characters/portraits/growing-buyers.webp?v=3.1.1" alt=""/><img src="assets/characters/portraits/dormant-vips.webp?v=3.1.1" alt=""/></div></article>
+        <article class="value-card"><span class="value-kicker gold">SPEND SMARTER</span><h3>Use attention and discounting more deliberately.</h3><ul><li>Defend margin instead of defaulting to bigger discounts.</li><li>Use lower-cost channels before expensive reactivation.</li><li>Deprioritize long-inactive customers when the signal is weak.</li><li>Focus effort where historical contribution and purchase gaps are clearer.</li></ul><div class="value-characters"><img src="assets/characters/portraits/best-customers.webp?v=3.1.1" alt=""/><img src="assets/characters/portraits/loyal-buyers.webp?v=3.1.1" alt=""/><img src="assets/characters/portraits/light-repeaters.webp?v=3.1.1" alt=""/></div></article>
+      </div>
+      <div class="how-card">
+        <div><p class="detail-kicker">HOW IT WORKS</p><h3>From order history to a clearer customer strategy.</h3><p>Bring customer ID, purchase date, and transaction value. The product calculates Recency, Frequency, and Monetary signals, forms nine groups, then pairs each group with practical guidance.</p></div>
+        <ol><li><span>01</span><strong>Bring order data</strong></li><li><span>02</span><strong>Calculate RFM</strong></li><li><span>03</span><strong>Form nine groups</strong></li><li><span>04</span><strong>Choose the next move</strong></li></ol>
+        <a class="button button-primary" href="https://customer-segment-studio.vercel.app/" target="_blank" rel="noreferrer">Try Customer Segment Studio <span aria-hidden="true">→</span></a>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="site-footer section-shell">
+<footer class="site-footer">
   <div><strong>Customer Segment Studio</strong><span>Segmentation made simple. Strategy made visible.</span></div>
   <div><span>A FoxForge Studio product</span><span>Built to make customer strategy easier to see and act on.</span></div>
 </footer>
@@ -266,9 +257,10 @@
   <button aria-label="Close image" class="lightbox-close" data-lightbox-close type="button">×</button>
   <img alt="" data-lightbox-image/>
 </dialog>
+
 <dialog class="review-dialog" data-review-dialog aria-labelledby="review-title">
   <button type="button" class="review-close" data-close-review aria-label="Close review request">×</button>
-  <p class="section-kicker">LET'S LOOK AT YOUR QUESTION</p>
+  <p class="dialog-kicker">LET'S LOOK AT YOUR QUESTION</p>
   <h2 id="review-title">A more useful<br/>next move.</h2>
   <p class="review-intro">Tell me what you want to understand about your customers. This opens an email draft to Simon, not a data upload.</p>
   <form data-review-form>
