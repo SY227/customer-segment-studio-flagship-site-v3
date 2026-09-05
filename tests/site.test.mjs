@@ -146,13 +146,17 @@ test('Understand Groups preserves all nine names and interactive strategy prompt
   assert.match(js, /textContent = value/);
 });
 
-test('Understand Groups uses an unedited crop from the same Dormant VIPs example', () => {
+test('Understand Groups keeps the selected-group experience fully dynamic', () => {
   const group = html.slice(html.indexOf('id="panel-group"'), html.indexOf('id="panel-move"'));
-  assert.match(group, /assets\/story\/dormant-vips-context\.webp/);
-  assert.equal(content.caseStudy.segment, 'Dormant VIPs');
-  assert.equal(content.caseStudy.facts.customers, 64);
-  assert.equal(content.caseStudy.facts.revenueShare, 13);
-  assert.equal(content.caseStudy.facts.historicalRevenue, 161200);
+
+  assert.doesNotMatch(group, /assets\/story\/dormant-vips-context\.webp/);
+  assert.match(group, /class="group-insight-card"/);
+  assert.match(group, /data-group-avatar/);
+  assert.match(group, /data-group-name/);
+  assert.match(group, /data-group-action/);
+  assert.match(group, /data-group-signal/);
+  assert.match(group, /data-group-move/);
+  assert.match(group, /class="group-picker"/);
 });
 
 test('Make the Move uses the same example and keeps recommendations as testable guidance', () => {
