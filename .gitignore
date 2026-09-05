@@ -1,0 +1,16 @@
+node_modules/
+.vercel/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.qa/
+
+# V3 local / deployment files
+.vercel/
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example

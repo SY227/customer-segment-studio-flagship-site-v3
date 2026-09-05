@@ -1,0 +1,167 @@
+{
+  "renderer": "Chromium, original HTML loaded with a localhost base URL; actual local HTTP assets; top-level navigation restricted in container",
+  "checks": [
+    {
+      "check": "automatic story ends on genuine product screen",
+      "passed": true
+    },
+    {
+      "check": "pause freezes story; replay works",
+      "passed": true
+    },
+    {
+      "check": "manual story steps show all three illustrated states",
+      "passed": true
+    },
+    {
+      "check": "show-product exits story immediately",
+      "passed": true
+    },
+    {
+      "check": "real screenshot lightbox and Escape work",
+      "passed": true
+    },
+    {
+      "check": "tab keyboard roving focus and screenshot changes",
+      "passed": true
+    },
+    {
+      "check": "nine-character selection updates only marketing guidance",
+      "passed": true
+    },
+    {
+      "check": "methodology disclosure",
+      "passed": true
+    },
+    {
+      "check": "review opens, required fields initially invalid",
+      "passed": true
+    },
+    {
+      "check": "review accepts a valid non-sensitive brief",
+      "passed": true
+    },
+    {
+      "check": "email draft targets Simon with encoded content",
+      "passed": true
+    },
+    {
+      "check": "copy brief reports copied or exposes selectable fallback",
+      "passed": true
+    },
+    {
+      "check": "dialog closes and restores focus",
+      "passed": true
+    },
+    {
+      "check": "all original and new screenshot assets decode",
+      "passed": true
+    },
+    {
+      "check": "320px: no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "320px: images decode",
+      "passed": true
+    },
+    {
+      "check": "390px: no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "390px: images decode",
+      "passed": true
+    },
+    {
+      "check": "390px: review dialog fits viewport",
+      "passed": true
+    },
+    {
+      "check": "768px: no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "768px: images decode",
+      "passed": true
+    },
+    {
+      "check": "1024px: no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "1024px: images decode",
+      "passed": true
+    },
+    {
+      "check": "1440px: no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "1440px: images decode",
+      "passed": true
+    },
+    {
+      "check": "1920px: no horizontal overflow",
+      "passed": true
+    },
+    {
+      "check": "1920px: images decode",
+      "passed": true
+    },
+    {
+      "check": "reduced motion: no autoplay",
+      "passed": true
+    },
+    {
+      "check": "reduced motion: manual still selection works",
+      "passed": true
+    },
+    {
+      "check": "reduced motion: return to product works",
+      "passed": true
+    },
+    {
+      "check": "no JS: story controls hidden and real screenshot visible",
+      "passed": true
+    },
+    {
+      "check": "no JS: review has a mailto fallback",
+      "passed": true
+    },
+    {
+      "check": "no JS: copy is visible",
+      "passed": true
+    },
+    {
+      "check": "no browser exceptions",
+      "passed": true
+    },
+    {
+      "check": "no failing asset HTTP responses",
+      "passed": true
+    },
+    {
+      "check": "HTTP /",
+      "passed": true
+    },
+    {
+      "check": "HTTP /styles.css",
+      "passed": true
+    },
+    {
+      "check": "HTTP /app.js",
+      "passed": true
+    },
+    {
+      "check": "HTTP /story-data.js",
+      "passed": true
+    },
+    {
+      "check": "HTTP /assets/story/dormant-vips-action.webp",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "httpFailures": []
+}
