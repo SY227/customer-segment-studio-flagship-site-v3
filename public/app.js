@@ -157,7 +157,14 @@ const selectGroup = id => {
   }
   const avatar = document.querySelector('[data-group-avatar]');
   if (avatar) {
-    avatar.src = versioned(`assets/characters/tiles/${group.id}.webp`);
+    const correctedPortraits = {
+      'occasional-buyers': 'assets/characters/portraits/occasional-buyers-rail.webp?v=3.1.2',
+      'inactive-customers': 'assets/characters/portraits/inactive-customers-rail.webp?v=3.1.2'
+    };
+
+    avatar.src = correctedPortraits[group.id]
+      || versioned(`assets/characters/tiles/${group.id}.webp`);
+
     avatar.alt = `${group.name} character`;
   }
   document.documentElement.style.setProperty('--selected-group-accent', group.color);
