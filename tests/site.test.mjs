@@ -122,21 +122,27 @@ test('See the Field uses the real Dormant VIPs product screen and historical dem
 test('Understand Groups preserves all nine names and interactive strategy prompts', () => {
   assert.deepEqual(Array.from(content.groups, g => g.name), expectedNames);
   assert.equal(new Set(content.groups.map(g => g.id)).size, 9);
-  const correctedPortraitGroups = new Set([
-    'occasional-buyers',
-    'inactive-customers'
-  ]);
+  const portraitArt = {
+    'best-customers': 'assets/characters/portraits/best-customers.webp',
+    'loyal-buyers': 'assets/characters/portraits/loyal-buyers.webp',
+    'new-buyers': 'assets/characters/portraits/new-buyers.webp',
+    'at-risk-vips': 'assets/characters/portraits/at-risk-vips.webp',
+    'growing-buyers': 'assets/characters/portraits/growing-buyers.webp',
+    'occasional-buyers': 'assets/characters/portraits/occasional-buyers-rail.webp',
+    'dormant-vips': 'assets/characters/portraits/dormant-vips.webp',
+    'light-repeaters': 'assets/characters/portraits/light-repeaters.webp',
+    'inactive-customers': 'assets/characters/portraits/inactive-customers-rail.webp'
+  };
 
   for (const group of content.groups) {
     assert.match(html, new RegExp(`data-group="${group.id}"`));
 
-    const expectedArt = correctedPortraitGroups.has(group.id)
-      ? `assets/characters/portraits/${group.id}-rail.webp`
-      : `assets/characters/tiles/${group.id}.webp`;
+    const expectedArt = portraitArt[group.id];
+    assert.ok(expectedArt, `Missing portrait mapping for ${group.id}`);
 
     assert.ok(
       html.includes(expectedArt),
-      `Missing expected character art for ${group.name}`
+      `Missing expected portrait art for ${group.name}`
     );
 
     assert.ok(group.action.length <= 28);
@@ -159,9 +165,10 @@ test('Understand Groups keeps the selected-group experience fully dynamic', () =
   assert.match(group, /class="group-picker"/);
 });
 
-test('Make the Move uses the same example and keeps recommendations as testable guidance', () => {
+test('Make the Move focuses on the action without a duplicate left screen', () => {
   const move = html.slice(html.indexOf('id="panel-move"'), html.indexOf('id="panel-value"'));
-  assert.match(move, /assets\/story\/dormant-vips-action\.webp/);
+  assert.doesNotMatch(move, /assets\/story\/dormant-vips-action\.webp/);
+  assert.doesNotMatch(move, /class="screen-card crop-card action-screen"/);
   assert.match(move, /Test a reason to return/);
   assert.match(move, /starting point for a business decision, not proof that a campaign will work/);
   assert.match(move, /14-day window/);

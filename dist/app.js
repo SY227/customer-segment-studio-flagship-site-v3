@@ -157,14 +157,19 @@ const selectGroup = id => {
   }
   const avatar = document.querySelector('[data-group-avatar]');
   if (avatar) {
-    const correctedPortraits = {
+    const portraitMap = {
+      'best-customers': 'assets/characters/portraits/best-customers.webp?v=3.1.1',
+      'loyal-buyers': 'assets/characters/portraits/loyal-buyers.webp?v=3.1.1',
+      'new-buyers': 'assets/characters/portraits/new-buyers.webp?v=3.1.1',
+      'at-risk-vips': 'assets/characters/portraits/at-risk-vips.webp?v=3.1.1',
+      'growing-buyers': 'assets/characters/portraits/growing-buyers.webp?v=3.1.1',
       'occasional-buyers': 'assets/characters/portraits/occasional-buyers-rail.webp?v=3.1.2',
+      'dormant-vips': 'assets/characters/portraits/dormant-vips.webp?v=3.1.1',
+      'light-repeaters': 'assets/characters/portraits/light-repeaters.webp?v=3.1.1',
       'inactive-customers': 'assets/characters/portraits/inactive-customers-rail.webp?v=3.1.2'
     };
 
-    avatar.src = correctedPortraits[group.id]
-      || versioned(`assets/characters/tiles/${group.id}.webp`);
-
+    avatar.src = portraitMap[group.id] || portraitMap['dormant-vips'];
     avatar.alt = `${group.name} character`;
   }
   document.documentElement.style.setProperty('--selected-group-accent', group.color);

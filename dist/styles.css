@@ -512,6 +512,99 @@ img { display: block; max-width: 100%; }
 .how-card li span { color:#8bd9d8; font-family:Georgia,serif; font-size:1rem; }
 .how-card .button-primary { background:#fff; color:#111821; white-space:nowrap; }
 
+
+/* ---------- V3.1.5 polish ---------- */
+
+/* Understand Groups */
+.group-picker {
+  margin: 0 0 20px;
+}
+
+.group-picker button {
+  position: relative;
+  overflow: hidden;
+  padding: 8px 7px 10px;
+  background: rgba(255,255,255,.84);
+}
+
+.group-picker button::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  top: 7px;
+  bottom: 34px;
+  border-radius: 12px;
+  border: 1px solid var(--picker-accent, rgba(17,24,32,.14));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.group-picker button[aria-pressed="true"] {
+  background: rgba(255,255,255,.92);
+  color: #11141a;
+  border-color: rgba(112,101,214,.32);
+  box-shadow: 0 10px 23px rgba(52,45,126,.12);
+  transform: translateY(-2px);
+}
+
+.group-picker img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.12 / 1;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.group-picker span {
+  position: relative;
+  z-index: 1;
+}
+
+.group-picker button[data-group="best-customers"] { --picker-accent: rgba(226,193,108,.74); }
+.group-picker button[data-group="loyal-buyers"] { --picker-accent: rgba(121,214,188,.78); }
+.group-picker button[data-group="new-buyers"] { --picker-accent: rgba(132,183,244,.78); }
+.group-picker button[data-group="at-risk-vips"] { --picker-accent: rgba(234,155,136,.76); }
+.group-picker button[data-group="growing-buyers"] { --picker-accent: rgba(214,188,121,.76); }
+.group-picker button[data-group="occasional-buyers"] { --picker-accent: rgba(198,138,255,.76); }
+.group-picker button[data-group="dormant-vips"] { --picker-accent: rgba(190,145,120,.78); }
+.group-picker button[data-group="light-repeaters"] { --picker-accent: rgba(127,200,248,.78); }
+.group-picker button[data-group="inactive-customers"] { --picker-accent: rgba(170,180,214,.82); }
+
+/* Extra fit tweak for Dormant VIP feet */
+.group-picker button[data-group="dormant-vips"]::before {
+  bottom: 26px;
+}
+
+/* Make the Move */
+.move-detail-grid {
+  display: block;
+}
+
+.move-card.move-card-full {
+  width: 100%;
+  max-width: none;
+  padding: 38px 40px;
+}
+
+.move-card.move-card-full .selected-character {
+  margin-bottom: 8px;
+}
+
+.move-card.move-card-full h3 {
+  max-width: 920px;
+}
+
+.move-card.move-card-full > p {
+  max-width: 980px;
+}
+
+.move-card.move-card-full .move-steps {
+  max-width: 760px;
+}
+
 /* ---------- Footer ---------- */
 .site-footer { width:min(var(--max), calc(100% - 72px)); min-height:90px; margin:0 auto; padding:23px 0 27px; display:flex; align-items:center; justify-content:space-between; gap:30px; color:#757c87; font-size:.7rem; }
 .site-footer > div { display:grid; gap:4px; }
