@@ -122,9 +122,23 @@ test('See the Field uses the real Dormant VIPs product screen and historical dem
 test('Understand Groups preserves all nine names and interactive strategy prompts', () => {
   assert.deepEqual(Array.from(content.groups, g => g.name), expectedNames);
   assert.equal(new Set(content.groups.map(g => g.id)).size, 9);
+  const correctedPortraitGroups = new Set([
+    'occasional-buyers',
+    'inactive-customers'
+  ]);
+
   for (const group of content.groups) {
     assert.match(html, new RegExp(`data-group="${group.id}"`));
-    assert.match(html, new RegExp(`assets/characters/tiles/${group.id}\\.webp`));
+
+    const expectedArt = correctedPortraitGroups.has(group.id)
+      ? `assets/characters/portraits/${group.id}-rail.webp`
+      : `assets/characters/tiles/${group.id}.webp`;
+
+    assert.ok(
+      html.includes(expectedArt),
+      `Missing expected character art for ${group.name}`
+    );
+
     assert.ok(group.action.length <= 28);
   }
   assert.match(html, /Strategy prompts, not customer quotes or predicted outcomes/);
